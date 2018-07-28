@@ -1,5 +1,5 @@
 .vs
-.vcxproj
-.user
-.filters
-.sln
+\core\.vcxproj
+\core\.user
+\core\.filters
+\core\.sln
