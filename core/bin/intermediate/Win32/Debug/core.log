@@ -1,3 +1,4 @@
 ﻿  Main.cpp
-c:\users\skinet\desktop\chip-8-emulation\core\src\main.cpp(21): warning C4244: 'initializing': conversion from 'std::streamoff' to 'unsigned int', possible loss of data
+  chip8.cpp
+  Generating Code...
   core.vcxproj -> C:\Users\Skinet\Desktop\Chip-8-Emulation\core\bin\Win32\Debug\core.exe

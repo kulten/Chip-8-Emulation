@@ -1,9 +1,8 @@
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <vector>
+#include <iomanip>
+#include "chip8.h"
 using namespace std;
-
 int main()
 {
 	ifstream file("C:/Users/Skinet/Desktop/Chip-8-Emulation/core/src/Fishie.ch8",ios::binary);
@@ -13,19 +12,21 @@ int main()
 	}
 	else
 	{
-		cout.width(2);
-		cout.fill('0');
 		file.seekg(0, ios::end);
-		streamoff size = file.tellg();
+		int size = (int)file.tellg();
 		file.seekg(0, ios::beg);
-		char *buffer = new char[size];
-		file.read(buffer, size);
+		char *temp_buffer = new char[size];
+		file.read(temp_buffer, size);
 		file.close();
+		uint8_t *buffer = new uint8_t[size];
 		for (int i = 0; i < size; i++)
 		{
-			cout <<hex<< (unsigned int)(unsigned char)buffer[i] << " ";
+			buffer[i] = (uint8_t)temp_buffer[i];
 		}
+		delete[] temp_buffer;
+		DisassemblerChip8(buffer, size);
 		delete[] buffer;
+
 	}
 	cin.get();
 }
