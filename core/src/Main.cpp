@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-	ifstream file("C:/Users/Skinet/Desktop/Chip-8-Emulation/core/src/Fishie.ch8",ios::binary);
+	ifstream file("C:/Users/Skinet/Desktop/Chip-8-Emulation/core/src/pong.rom",ios::binary);
 	if (!file.is_open())
 	{
 		cout << "Error";
